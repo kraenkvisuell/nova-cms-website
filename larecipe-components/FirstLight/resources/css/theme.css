@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Inconsolata&display=swap');
 
 body {
     font-family: Nunito, sans-serif;
@@ -47,8 +47,14 @@ body {
     content: '# ';
 }
 
-.documentation > pre {
-    background-color: #EDF2F7;
-    border-radius: 8px;
-    padding: 20px 15px;
+
+
+
+
+.documentation.is-dark code[class*=language-],
+.documentation.is-dark pre[class*=language-],
+.documentation.is-light pre[class*=language-],
+.documentation.is-light pre[class*=language-]
+{
+    font-family: 'Inconsolata', monospace;
 }

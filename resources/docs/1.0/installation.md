@@ -8,6 +8,7 @@
   - [Media](#media)
   - [Storage Link](#storage-link)
   - [Migrations](#migrations)
+  - [Add tools](#add-tools)
 
 <a name="install-laravel-nova"></a>
 ## Install Laravel Nova
@@ -48,4 +49,20 @@ Now run all the migrations:
 
 ``` php
 php artisan migrate
+```
+
+<a name="add-tools"></a>
+## Add tools
+
+Nova CMS uses some third party packages. You will need to add these tools to your `NovaServiceProvider.php`.
+``` php
+public function tools()
+{
+    return [
+        // other tools
+        new \OptimistDigital\MenuBuilder\MenuBuilder,
+        new \ClassicO\NovaMediaLibrary\NovaMediaLibrary,
+        new \OptimistDigital\NovaSettings\NovaSettings,
+    ];
+}
 ```
